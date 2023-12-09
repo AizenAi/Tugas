@@ -55,7 +55,7 @@ footer {
                 <a class="nav-link" href="wali.php">Wali Mahasiswa</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="index.php">Admin</a>
+                <a class="nav-link" href="admin.php">Admin</a>
             </li>
         </ul>
     </div>

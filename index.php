@@ -7,33 +7,55 @@
     <link rel="stacksheet" href="css/style.css">
     <style>
         body {
-    padding-top: 56px;
-    padding-bottom: 60px; 
-}
+            padding-top: 56px;
+            padding-bottom: 60px;
+        }
 
-.navbar {
-    margin-bottom: 20px;
-}
-
-#content {
-    padding: 20px;
-    overflow-y: auto; 
-    max-height: 100vh
-}
-
-.container {
-    margin-bottom: 20px;
-}
-
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #343a40; 
-    color: #ffffff; 
-    text-align: center;
-    padding: 10px 0;
-}
+        .navbar {
+            margin-bottom: 20px;
+        }
+        #content {
+            padding: 20px;
+            overflow-y: auto;
+            max-height: 100vh;
+        }
+        .container {
+            margin-bottom: 20px;
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #343a40;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        h2 {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .table-container {
+            margin-top: 10px;
+        }
+        .table {
+            width: 100%;
+            max-width: 1500px; 
+            margin: 0 auto; 
+        }
+        .table th, .table td {
+            text-align: center;
+        }
+        .table thead th {
+            background-color: #343a40;
+            color: #ffffff;
+        }
+        .table tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .table tbody tr:hover {
+            background-color: #d4edda;
+        }
     </style>
     <title>Tabel</title>
 </head>
@@ -55,7 +77,7 @@ footer {
                 <a class="nav-link" href="wali.php">Wali Mahasiswa</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="index.php">Admin</a>
+                <a class="nav-link" href="admin.php">Admin</a>
             </li>
         </ul>
     </div>
@@ -71,7 +93,6 @@ footer {
                 <th>JURUSAN</th>
                 <th>JENIS KELAMIN</th>
                 <th>ALAMAT</th>
-                <th>MENU</th>
             </tr>
         </thead>
         <tbody>
@@ -88,10 +109,6 @@ footer {
                     <td>".$row['jurusan']."</td>
                     <td>".$row['jenis_kelamin']."</td>
                     <td>".$row['alamat']."</td>
-                    <td>
-                        <a href='form-edit.php?id_mhs=$row[id_mhs]' class='btn btn-warning btn-sm'>Edit</a>
-                        <a href='delete.php?id_mhs=$row[id_mhs]' class='btn btn-danger btn-sm' onclick='return confirm(\"Are you sure you want to delete this record?\");'>Delete</a>
-                    </td>
                 </tr>";
                 $no++;
             }

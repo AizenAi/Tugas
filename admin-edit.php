@@ -7,58 +7,35 @@
     <link rel="stacksheet" href="css/style.css">
     <style>
         body {
-            padding-top: 56px;
-            padding-bottom: 60px;
-        }
+    padding-top: 56px;
+    padding-bottom: 60px; 
+}
 
-        .navbar {
-            margin-bottom: 20px;
-        }
-        #content {
-            padding: 20px;
-            overflow-y: auto;
-            max-height: 100vh;
-        }
-        .container {
-            margin-bottom: 20px;
-        }
-        footer {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            background-color: #343a40;
-            color: #ffffff;
-            text-align: center;
-            padding: 10px 0;
-        }
-        h2 {
-            margin-top: 20px;
-            text-align: center;
-        }
-        .table-container {
-            margin-top: 10px;
-        }
-        .table {
-            width: 100%;
-            max-width: 1500px; 
-            margin: 0 auto; 
-        }
-        .table th, .table td {
-            text-align: center;
-        }
-        .table thead th {
-            background-color: #343a40;
-            color: #ffffff;
-        }
-        .table tbody tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-        .table tbody tr:hover {
-            background-color: #d4edda;
-        }
+.navbar {
+    margin-bottom: 20px;
+}
+
+#content {
+    padding: 20px;
+    overflow-y: auto; 
+    max-height: 100vh
+}
+
+.container {
+    margin-bottom: 20px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #343a40; 
+    color: #ffffff; 
+    text-align: center;
+    padding: 10px 0;
+}
     </style>
-    </style>
-    <title>Sistem Informasi Akademik</title>
+    <title>Tabel</title>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -78,7 +55,7 @@
                 <a class="nav-link" href="wali.php">Wali Mahasiswa</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="admin.php">Admin</a>
+                <a class="nav-link" href="index.php">Admin</a>
             </li>
         </ul>
     </div>
@@ -113,6 +90,7 @@
                     <td>".$row['alamat']."</td>
                     <td>
                         <a href='form-edit.php?id_mhs=$row[id_mhs]' class='btn btn-warning btn-sm'>Edit</a>
+                        <a href='delete.php?id_mhs=$row[id_mhs]' class='btn btn-danger btn-sm' onclick='return confirm(\"Are you sure you want to delete this record?\");'>Delete</a>
                     </td>
                 </tr>";
                 $no++;
@@ -121,9 +99,6 @@
         </tbody>
     </table>
 </div>
-<footer class="bg-dark text-white text-center py-2 fixed-bottom">
-    <p>&copy; 2023 Sistem Informasi Akademik</p>
-</footer>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofjYYuL5r+erFgktRLy8zO8gkDQ6L4MVq" crossorigin="anonymous"></script>
